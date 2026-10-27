@@ -2,7 +2,7 @@ services:
   - type: web
     name: sisr-signup
     runtime: node
-    plan: free
+    plan: starter
     buildCommand: npm ci --omit=dev
     startCommand: npm start
     healthCheckPath: /
