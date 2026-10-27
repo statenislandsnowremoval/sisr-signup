@@ -13,5 +13,5 @@
 window.SISR_CONFIG = {
   API_BASE_URL:
     (typeof localStorage !== 'undefined' && localStorage.getItem('SISR_API_BASE_URL')) ||
-    ''
+    'https://sisr-signup.onrender.com'
 };
