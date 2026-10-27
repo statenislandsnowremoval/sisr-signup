@@ -1,0 +1,21 @@
+node_modules/
+.env
+.DS_Store
+data/signups.json
+data/email-outbox.json
+*.log
+.idea/
+.vscode/
+
+# Capacitor / native
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/captures/
+android/*.iml
+android/app/*.iml
+ios/App/Pods/
+ios/App/App/public/
+ios/DerivedData/
+*.xcuserdata/

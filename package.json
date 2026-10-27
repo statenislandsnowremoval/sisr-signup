@@ -1,0 +1,30 @@
+{
+  "name": "sisr-signup",
+  "version": "1.0.0",
+  "description": "Staten Island Snow Removal — winter contact signup (Capacitor iOS + Android)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build:web": "node scripts/sync-www.js",
+    "cap:sync": "npm run build:web && npx cap sync",
+    "cap:android": "npm run cap:sync && npx cap open android",
+    "cap:ios": "npm run cap:sync && npx cap open ios"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/core": "^7.6.9",
+    "@capacitor/ios": "^7.6.9",
+    "@capacitor/splash-screen": "^7.0.5",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.9",
+    "express": "^4.21.2",
+    "nodemailer": "^10.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.6.9"
+  }
+}

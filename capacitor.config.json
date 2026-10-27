@@ -1,0 +1,16 @@
+{
+  "appId": "com.statenislandsnowremoval.signup",
+  "appName": "Staten Island Snow Removal",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "backgroundColor": "#f3f9fd",
+      "showSpinner": false
+    }
+  }
+}

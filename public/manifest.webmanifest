@@ -1,0 +1,23 @@
+{
+  "name": "Staten Island Snow Removal",
+  "short_name": "SI Snow",
+  "description": "Winter contact signup for Staten Island Snow Removal — residential, commercial, and plowing across Staten Island.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3f9fd",
+  "theme_color": "#e4f2fb",
+  "icons": [
+    {
+      "src": "./logo-v2.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./logo-v2.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

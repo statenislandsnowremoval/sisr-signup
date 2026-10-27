@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" style="background:#f3f9fd">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e4f2fb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="description" content="Staten Island Snow Removal — residential & commercial snow clearing across all of Staten Island." />
+  <link rel="icon" type="image/png" href="./logo-v2.png" />
+  <link rel="apple-touch-icon" href="./logo-v2.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <title>Staten Island Snow Removal</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body style="background:#f3f9fd;margin:0">
+  <div id="splash" class="splash" aria-hidden="true">
+    <img src="./logo-v2.png" alt="Staten Island Snow Removal" class="splash-logo" width="280" height="280" />
+  </div>
+
+  <main class="app-shell">
+    <!-- HOME -->
+    <section id="screen-home" class="screen is-active" data-screen="home">
+      <header class="home-hero">
+        <img src="./logo-v2.png" alt="Staten Island Snow Removal yeti logo" class="home-logo" width="280" height="280" />
+        <h1 class="visually-hidden">Staten Island Snow Removal</h1>
+        <p class="home-tagline">BUILT FOR STATEN ISLAND WINTERS</p>
+        <p class="home-licensed">Licensed and Insured</p>
+        <p class="home-sub">All borough neighborhoods · All of Staten Island</p>
+      </header>
+
+      <div class="home-carousel" id="homeCarousel" role="region" aria-roledescription="carousel" aria-label="Main menu">
+        <div class="carousel-viewport" id="homeCarouselViewport">
+          <div class="carousel-track" id="homeCarouselTrack">
+            <div class="carousel-slide is-active" data-index="0">
+              <button type="button" class="carousel-orb" data-nav="signup" aria-label="Open Join winter list">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/join.png" alt="" />
+                </span>
+                <span class="carousel-label">Join winter list</span>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-index="1">
+              <button type="button" class="carousel-orb" data-nav="services" aria-label="Open Our services">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/services.png" alt="" />
+                </span>
+                <span class="carousel-label">Our services</span>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-index="2">
+              <button type="button" class="carousel-orb" data-nav="area" aria-label="Open Service area">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/area.png" alt="" />
+                </span>
+                <span class="carousel-label">Service area</span>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-index="3">
+              <button type="button" class="carousel-orb" data-nav="alerts" aria-label="Open Storm alerts">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/alerts.png" alt="" />
+                </span>
+                <span class="carousel-label">Storm alerts</span>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-index="4">
+              <button type="button" class="carousel-orb" data-nav="contact" aria-label="Open Call / text us">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/contact.png" alt="" />
+                </span>
+                <span class="carousel-label">Call / text us</span>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-index="5">
+              <button type="button" class="carousel-orb" data-nav="account" aria-label="Open My account">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/account.png" alt="" />
+                </span>
+                <span class="carousel-label">My account</span>
+              </button>
+            </div>
+
+            <div class="carousel-slide" data-index="6">
+              <button type="button" class="carousel-orb" data-nav="about" aria-label="Open About">
+                <span class="carousel-bubble" aria-hidden="true">
+                  <img class="carousel-icon" src="./icons/about.png" alt="" />
+                </span>
+                <span class="carousel-label">About</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-dots" role="tablist" aria-label="Menu pages" id="homeCarouselDots">
+          <button type="button" class="carousel-dot is-active" role="tab" aria-selected="true" aria-label="Join winter list" data-carousel-index="0"></button>
+          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Our services" data-carousel-index="1"></button>
+          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Service area" data-carousel-index="2"></button>
+          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Storm alerts" data-carousel-index="3"></button>
+          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Call / text us" data-carousel-index="4"></button>
+          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="My account" data-carousel-index="5"></button>
+          <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="About" data-carousel-index="6"></button>
+        </div>
+      </div>
+
+      <p class="footer-note">Staten Island Snow Removal · All of Staten Island</p>
+    </section>
+
+    <!-- SIGNUP -->
+    <section id="screen-signup" class="screen" data-screen="signup" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">Join winter list</h2>
+      </header>
+
+      <div class="card" id="formCard">
+        <p class="eyebrow">WINTER CONTACT</p>
+        <h3 class="card-heading">Get on our list</h3>
+        <p class="sub">Leave your info and we’ll reach out when the snow hits. Just your contact info — we’ll follow up when snow is in the forecast.</p>
+
+        <form id="signupForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Full name" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" autocomplete="street-address" required placeholder="Street address, Staten Island" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(718) 555-0100" />
+          </div>
+
+          <div class="form-group">
+            <label>Preferred contact method</label>
+            <div class="choice-row" role="radiogroup" aria-label="Preferred contact method">
+              <label class="choice"><input type="radio" name="preferredContact" value="Call" required /><span>Call</span></label>
+              <label class="choice"><input type="radio" name="preferredContact" value="Text" /><span>Text</span></label>
+              <label class="choice"><input type="radio" name="preferredContact" value="Email" /><span>Email</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Service type</label>
+            <div class="choice-row choice-row-4" role="radiogroup" aria-label="Service type">
+              <label class="choice"><input type="radio" name="serviceType" value="Driveway" required /><span>Driveway</span></label>
+              <label class="choice"><input type="radio" name="serviceType" value="Sidewalk" /><span>Sidewalk</span></label>
+              <label class="choice"><input type="radio" name="serviceType" value="Both" /><span>Both</span></label>
+              <label class="choice"><input type="radio" name="serviceType" value="Commercial" /><span>Commercial</span></label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Spec of work / notes <span class="optional">(optional)</span></label>
+            <textarea id="notes" name="notes" placeholder="Gates, cars to avoid, plowing needs, special instructions…"></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit" id="submitBtn">Join winter list</button>
+          <div id="formMsg" class="msg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="card" id="successCard" hidden>
+        <p class="eyebrow">YOU’RE IN</p>
+        <h3 class="card-heading">You’re on the list ❄️</h3>
+        <p class="sub">Thanks — we’ll contact you during the winter months using your preferred method.</p>
+        <p class="sub" id="successRewardNote" hidden></p>
+        <p class="sub" id="successRequestNote" hidden></p>
+        <button class="btn btn-secondary" type="button" id="anotherBtn">Submit another</button>
+        <button class="btn btn-navy" type="button" data-nav="account" style="width:100%;margin-top:10px">View My account</button>
+        <button class="btn btn-secondary" type="button" data-nav="home" style="width:100%;margin-top:10px">Back to home</button>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="screen-services" class="screen" data-screen="services" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">Our services</h2>
+      </header>
+
+      <div class="intro-block">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h3 class="card-heading">Full winter property care</h3>
+        <p class="sub">Residential snow removal, commercial clearing, and dedicated snow plowing across all of Staten Island. No prices in the app — tell us what you need when you join the list and we’ll follow up.</p>
+      </div>
+
+      <ul class="service-list">
+        <li class="service-card">
+          <h4>Residential snow removal</h4>
+          <p>Keep driveways, walks, and entryways clear so your home stays safe and usable after every storm.</p>
+        </li>
+        <li class="service-card">
+          <h4>Commercial snow removal</h4>
+          <p>Storefronts, offices, and business lots cleared so customers and staff can get in and out.</p>
+        </li>
+        <li class="service-card service-card-featured">
+          <h4>Snow plowing</h4>
+          <p>Dedicated plow service for wider drives, shared lots, apartment / church / business lots, and deeper accumulations when shovels aren’t enough.</p>
+        </li>
+        <li class="service-card">
+          <h4>Driveway clearing</h4>
+          <p>Focused driveway work — from curb to garage — so vehicles can roll out after the storm.</p>
+        </li>
+        <li class="service-card">
+          <h4>Sidewalk &amp; walkway clearing</h4>
+          <p>Front walks, side paths, and stoops cleared for safe foot traffic and city compliance.</p>
+        </li>
+        <li class="service-card">
+          <h4>Parking lot clearing</h4>
+          <p>Lot lanes, stalls, and access points for apartments, churches, and local businesses.</p>
+        </li>
+        <li class="service-card">
+          <h4>De-icing &amp; salting</h4>
+          <p>Ice melt and salt application on high-traffic surfaces to cut slip risk after clearing.</p>
+        </li>
+        <li class="service-card">
+          <h4>Snow hauling &amp; relocation</h4>
+          <p>Move piles off critical areas when space is tight or sightlines need opening up.</p>
+        </li>
+        <li class="service-card">
+          <h4>Storm emergency response</h4>
+          <p>Priority outreach when major snow hits — we’re monitoring Staten Island storms with you.</p>
+        </li>
+      </ul>
+
+      <button type="button" class="btn btn-primary" data-nav="signup" style="margin-top:8px">Join winter list</button>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section id="screen-area" class="screen" data-screen="area" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">Service area</h2>
+      </header>
+
+      <div class="card area-card">
+        <p class="eyebrow">COVERAGE</p>
+        <h3 class="card-heading">All of Staten Island</h3>
+        <p class="sub">We service <strong>all areas of Staten Island</strong> — North Shore, South Shore, East Shore, West Shore, and everywhere in between.</p>
+
+        <div class="map-wrap">
+          <iframe
+            title="Map of Staten Island, New York"
+            class="si-map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-74.28%2C40.48%2C-74.04%2C40.66&amp;layer=mapnik&amp;marker=40.5795%2C-74.1502"
+          ></iframe>
+        </div>
+        <p class="map-caption">
+          <a href="https://www.openstreetmap.org/?mlat=40.5795&amp;mlon=-74.1502#map=11/40.5795/-74.1502" target="_blank" rel="noopener noreferrer">View larger map</a>
+          · OpenStreetMap
+        </p>
+      </div>
+    </section>
+
+    <!-- STORM ALERTS -->
+    <section id="screen-alerts" class="screen" data-screen="alerts" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">Storm alerts</h2>
+      </header>
+
+      <div class="card">
+        <p class="eyebrow">STAY AHEAD</p>
+        <h3 class="card-heading">Know when snow is coming</h3>
+        <p class="sub">Opt in and we’ll gear up for push and text-style storm notices when Staten Island is in the forecast. Push delivery ships with the App Store / Play build — your preference is saved on this device now.</p>
+
+        <div class="alert-toggle-row">
+          <div>
+            <p class="alert-toggle-label">Storm alerts</p>
+            <p class="alert-toggle-hint" id="alertStatus">Currently off</p>
+          </div>
+          <button type="button" id="alertToggle" class="toggle" role="switch" aria-checked="false" aria-label="Enable storm alerts">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+
+        <div id="alertMsg" class="msg" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="screen-contact" class="screen" data-screen="contact" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">Call / text us</h2>
+      </header>
+
+      <div class="card">
+        <p class="eyebrow">REACH THE CREW</p>
+        <h3 class="card-heading">We’re here for Staten Island</h3>
+        <p class="sub">Questions about coverage or the winter list? Call, text, or email anytime.</p>
+
+        <a class="contact-row" href="tel:+17189815151">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <span>
+            <strong>Call</strong>
+            <span class="contact-detail">718-981-5151</span>
+          </span>
+        </a>
+
+        <a class="contact-row" href="sms:+17189815151">
+          <span class="contact-icon" aria-hidden="true">💬</span>
+          <span>
+            <strong>Text</strong>
+            <span class="contact-detail">718-981-5151</span>
+          </span>
+        </a>
+
+        <a class="contact-row" href="mailto:statenislandsnowremovals@gmail.com">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <span>
+            <strong>Email</strong>
+            <span class="contact-detail">statenislandsnowremovals@gmail.com</span>
+          </span>
+        </a>
+
+        <div class="contact-row contact-row-static">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <span>
+            <strong>Location</strong>
+            <span class="contact-detail">Staten Island, NY</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY ACCOUNT -->
+    <section id="screen-account" class="screen" data-screen="account" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">My account</h2>
+      </header>
+
+      <div class="card rewards-card" id="rewardsCard">
+        <p class="eyebrow">BORO WINTER STAMPS</p>
+        <h3 class="card-heading">Your stamp card</h3>
+        <p class="sub" id="rewardsCopy">Collect snowflake stamps when you join the winter list or send a request. Five stamps unlock a free driveway touch-up or a priority spot when the next SI storm rolls in.</p>
+        <div class="stamp-row" id="stampRow" aria-label="Winter stamp progress"></div>
+        <p class="rewards-progress" id="rewardsProgress">0 of 5 stamps</p>
+        <p class="rewards-prize" id="rewardsPrize" hidden>🎉 Card filled — claim a free touch-up or priority storm slot next time you talk to the crew.</p>
+      </div>
+
+      <div class="card" id="propertyCard">
+        <p class="eyebrow">SAVED PROPERTY</p>
+        <h3 class="card-heading">Your place</h3>
+        <p class="sub">Saved on this phone so you don’t retype every storm. Name is optional.</p>
+        <form id="propertyForm" novalidate>
+          <div class="form-group">
+            <label for="propName">Name <span class="optional">(optional)</span></label>
+            <input id="propName" name="propName" type="text" autocomplete="name" placeholder="Who we ask for" />
+          </div>
+          <div class="form-group">
+            <label for="propAddress">Address</label>
+            <input id="propAddress" name="propAddress" type="text" autocomplete="street-address" required placeholder="Street address, Staten Island" />
+          </div>
+          <div class="form-group">
+            <label for="propNotes">Driveway notes <span class="optional">(optional)</span></label>
+            <textarea id="propNotes" name="propNotes" placeholder="Cars to leave, gates, steep apron, salt preference…"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Preferred contact</label>
+            <div class="choice-row" role="radiogroup" aria-label="Preferred contact">
+              <label class="choice"><input type="radio" name="propContact" value="Call" /><span>Call</span></label>
+              <label class="choice"><input type="radio" name="propContact" value="Text" /><span>Text</span></label>
+              <label class="choice"><input type="radio" name="propContact" value="Email" /><span>Email</span></label>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit" id="propertySaveBtn">Save property</button>
+          <div id="propertyMsg" class="msg" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="card" id="requestsCard">
+        <p class="eyebrow">MY REQUESTS</p>
+        <h3 class="card-heading">Winter list &amp; jobs</h3>
+        <p class="sub">Confirmation IDs from this phone. Empty until you join the list or send a request.</p>
+        <ul class="request-list" id="requestList"></ul>
+        <p class="empty-state" id="requestEmpty">No requests yet — join the winter list and you’ll see a confirmation here.</p>
+        <button type="button" class="btn btn-secondary" data-nav="signup" style="margin-top:10px">Join winter list</button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="screen-about" class="screen" data-screen="about" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="home" aria-label="Back to home">←</button>
+        <h2 class="screen-title">About</h2>
+      </header>
+
+      <div class="card">
+        <img src="./logo-v2.png" alt="" class="about-logo" width="120" height="120" />
+        <p class="eyebrow">THE CREW</p>
+        <h3 class="card-heading">Staten Island Snow Removal</h3>
+        <p class="sub">A local, licensed Staten Island team built for borough winters — part of the Empire State Fence family. We clear residential and commercial properties across every neighborhood — so you’re not stuck waiting on a plow that never shows.</p>
+        <p class="sub">Join the winter list, flip on storm alerts, and we’ll reach out when the snow starts flying.</p>
+        <button type="button" class="btn btn-secondary" data-nav="privacy" style="margin-top:4px">Read our privacy policy</button>
+      </div>
+    </section>
+
+    <!-- PRIVACY (store-listing friendly; also at privacy.html) -->
+    <section id="screen-privacy" class="screen" data-screen="privacy" hidden>
+      <header class="screen-bar">
+        <button type="button" class="back-btn" data-nav="about" aria-label="Back to about">←</button>
+        <h2 class="screen-title">Privacy</h2>
+      </header>
+
+      <div class="card" id="privacy">
+        <p class="eyebrow">YOUR INFO</p>
+        <h3 class="card-heading">Privacy policy</h3>
+        <p class="sub"><strong>Staten Island Snow Removal</strong> (a snow-removal service of Empire State Fence, Staten Island, NY) respects your privacy. This policy explains what we collect in this app and how we use it.</p>
+
+        <h4 class="policy-h">What we collect</h4>
+        <p class="sub">When you join the winter contact list we ask for your <strong>name</strong>, <strong>street address</strong>, <strong>email</strong>, <strong>phone</strong>, preferred contact method, service type (driveway / sidewalk / both / commercial), and any optional notes you add. If you opt into storm alerts, that preference is stored on your device (localStorage) so we know you want notices.</p>
+
+        <h4 class="policy-h">How we use it</h4>
+        <p class="sub">We use your information only to contact you about snow removal service, storm updates, and related winter work on Staten Island. We do <strong>not</strong> sell your information or share it for unrelated marketing.</p>
+
+        <h4 class="policy-h">Who gets it</h4>
+        <p class="sub">Signup details are sent to our business inbox so our local crew can follow up. Service providers that host our email or app backend may process data solely to deliver that service. We do not use your contact info for third-party advertising.</p>
+
+        <h4 class="policy-h">On-device storage</h4>
+        <p class="sub">Storm-alert preference, saved property, local request stubs, winter stamp progress, and (if a submit fails offline) a local copy of your signup may stay on this device in browser / app storage. Clearing app data or site data removes it.</p>
+
+        <h4 class="policy-h">Kids</h4>
+        <p class="sub">This app is for adults arranging property service. We do not knowingly collect information from children under 13.</p>
+
+        <h4 class="policy-h">Contact / requests</h4>
+        <p class="sub">Questions, updates, or a request to remove your winter-list info: email <a href="mailto:statenislandsnowremovals@gmail.com">statenislandsnowremovals@gmail.com</a> or call / text <a href="tel:+17189815151">718-981-5151</a>. Staten Island, NY.</p>
+
+        <p class="sub policy-updated">Last updated: October 2026</p>
+        <p class="sub"><a href="./privacy.html">Open standalone privacy page</a> (for store listings)</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

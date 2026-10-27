@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Staten Island Snow Removal</string>
+    <string name="title_activity_main">Staten Island Snow Removal</string>
+    <string name="package_name">com.statenislandsnowremoval.signup</string>
+    <string name="custom_url_scheme">com.statenislandsnowremoval.signup</string>
+</resources>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1f3a" />
+  <meta name="robots" content="noindex" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="/logo-v2.png" />
+  <title>Admin — Staten Island Snow Removal</title>
+  <link rel="stylesheet" href="/styles-lightblue.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <div id="loginView" class="card login-box">
+      <div class="brand" style="margin-bottom:12px">
+        <img src="/logo-v2.png" alt="" width="120" height="120" />
+        <h1>Staff admin</h1>
+        <p class="tagline">Staten Island Snow Removal</p>
+      </div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="current-password" required placeholder="Admin password" />
+        </div>
+        <button class="btn btn-primary" type="submit">Sign in</button>
+        <div id="loginMsg" class="msg" role="status"></div>
+      </form>
+      <p class="footer-note"><a href="/">← Back to signup</a></p>
+    </div>
+
+    <div id="adminView" hidden>
+      <header class="admin-header">
+        <div class="brand-inline">
+          <img src="/logo-v2.png" alt="SISR logo" />
+          <div>
+            <h1>Winter signups</h1>
+            <p class="sub">Staten Island Snow Removal</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn btn-secondary" href="/">Signup form</a>
+          <button class="btn btn-secondary" type="button" id="logoutBtn">Log out</button>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="Search name, address, email, phone…" />
+        <button class="btn btn-navy" type="button" id="refreshBtn">Refresh</button>
+        <button class="btn btn-primary" type="button" id="exportBtn" style="width:auto">Export CSV</button>
+      </div>
+
+      <p id="countLine" class="sub" style="margin:0 0 10px;color:var(--muted)"></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Contact</th>
+              <th>Service</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div id="adminMsg" class="msg" role="status"></div>
+    </div>
+  </main>
+  <script src="/admin.js"></script>
+</body>
+</html>
